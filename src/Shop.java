@@ -50,7 +50,7 @@ public class Shop {
             if (cost == 0) {
                 System.out.println("We ain't got none of those.");
             } else {
-                System.out.print("It'll cost you " + cost + " gold. Buy it (y/n)? ");
+                System.out.print("It'll cost you " + Colors.YELLOW + cost + " gold" + Colors.RESET + ". Buy it (y/n)? ");
                 String option = SCANNER.nextLine().toLowerCase();
 
                 if (option.equals("y")) {
@@ -59,13 +59,13 @@ public class Shop {
             }
         } else {
             System.out.println("What're you lookin' to sell? ");
-            System.out.print("You currently have the following items: " + customer.getInventory());
+            System.out.print("You currently have the following items: " + Colors.PURPLE + customer.getInventory() + Colors.RESET);
             String item = SCANNER.nextLine().toLowerCase();
             int cost = checkMarketPrice(item, false);
             if (cost == 0) {
                 System.out.println("We don't want none of those.");
             } else {
-                System.out.print("It'll get you " + cost + " gold. Sell it (y/n)? ");
+                System.out.print("It'll get you "+ Colors.YELLOW + cost + " gold" + Colors.RESET + ". Sell it (y/n)? ");
                 String option = SCANNER.nextLine().toLowerCase();
 
                 if (option.equals("y")) {
