@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="" />
+    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Hunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Terrain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Town.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreasureHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreasureHunterRunner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
