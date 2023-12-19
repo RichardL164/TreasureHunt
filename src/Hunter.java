@@ -8,6 +8,7 @@ public class Hunter {
     //instance variables
     private String hunterName;
     private String[] kit;
+    private String[] treasure;
     private int gold;
 
     /**
@@ -20,11 +21,24 @@ public class Hunter {
         this.hunterName = hunterName;
         kit = new String[6]; // only 5 possible items can be stored in kit
         gold = startingGold;
+        treasure = new String[3];
     }
 
     //Accessors
     public String getHunterName() {
         return hunterName;
+    }
+
+    public boolean checkTreasure(String treasureFound) {
+        int i = 0;
+        for (String treasure : treasure) {
+            if (treasure != treasureFound && treasureFound != "dust") {
+                this.treasure[i] += treasureFound;
+                i++;
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

@@ -12,6 +12,7 @@ public class Town {
     private String printMessage;
     private boolean toughTown;
 
+
     /**
      * The Town Constructor takes in a shop and the surrounding terrain, but leaves the hunter as null until one arrives.
      *
@@ -147,5 +148,16 @@ public class Town {
     private boolean checkItemBreak() {
         double rand = Math.random();
         return (rand < 0.5);
+    }
+
+    private String huntForTreasure() {
+        if (!leaveTown()) {
+            return "you have already searched this town";
+        }
+        int treasure = (int) (Math.random() * 3) + 1;
+        for (int i != )
+        Hunter.checkTreasure()
+
+
     }
 }
