@@ -160,5 +160,6 @@ public class Town {
         Hunter.checkTreasure()
 
 
+
     }
 }
