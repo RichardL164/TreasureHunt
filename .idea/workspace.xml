@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="Fixed TH 7 bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Town.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TreasureHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreasureHunter.java" afterDir="false" />
+    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="Done with TH 7 &#10;Done with TH 9">
+      <change beforePath="$PROJECT_DIR$/src/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,20 +58,12 @@
       <option name="project" value="LOCAL" />
       <updated>1703096042875</updated>
     </task>
-    <task id="LOCAL-00003" summary="Fixed TH 7 bug">
-      <created>1703096435313</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1703096435313</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done with TH 3" />
     <MESSAGE value="Done with TH 7 &#10;Done with TH 9" />
-    <MESSAGE value="Fixed TH 7 bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed TH 7 bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done with TH 7 &#10;Done with TH 9" />
   </component>
 </project>
