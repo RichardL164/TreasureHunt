@@ -112,7 +112,6 @@ public class TreasureHunter {
                 System.out.println(currentTown.getLatestNews());
                 System.out.println("***");
                 System.out.println(hunter);
-                System.out.println(hunter.getTreasure());
                 System.out.println(currentTown);
                 System.out.println("(B)uy something at the shop.");
                 System.out.println("(S)ell something at the shop.");
@@ -145,11 +144,12 @@ public class TreasureHunter {
         } else if (choice.equals("l")) {
             currentTown.lookForTrouble();
         } else if (choice.equals("D")) {
-            System.out.println();
-        } else if (choice.equals("x")) {
+            currentTown.
+        }
+        else if (choice.equals("x")) {
             System.out.println("Fare thee well, " + hunter.getHunterName() + "!");
         } else if (choice.equals(("h"))) {
-            System.out.println(currentTown.huntForTreasure());
+
         } else {
             System.out.println("Yikes! That's an invalid option! Try again.");
         }
