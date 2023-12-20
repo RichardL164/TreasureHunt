@@ -68,11 +68,11 @@ public class TreasureHunter {
      * Creates a new town and adds the Hunter to it.
      */
     private void enterTown() {
-        double markdown = 0.25;
+        double markdown = 0.5;
         double toughness = 0.4;
         if (hardMode) {
             // in hard mode, you get less money back when you sell items
-            markdown = 0.5;
+            markdown = 0.25;
 
             // and the town is "tougher"
             toughness = 0.75;
@@ -143,8 +143,8 @@ public class TreasureHunter {
             }
         } else if (choice.equals("l")) {
             currentTown.lookForTrouble();
-        } else if (choice.equals("D")) {
-            currentTown.
+        } else if (choice.equals("d")) {
+            currentTown.digGold();
         }
         else if (choice.equals("x")) {
             System.out.println("Fare thee well, " + hunter.getHunterName() + "!");

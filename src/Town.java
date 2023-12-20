@@ -11,6 +11,7 @@ public class Town {
     private Terrain terrain;
     private String printMessage;
     private boolean toughTown;
+    private boolean dug;
 
 
     /**
@@ -31,6 +32,7 @@ public class Town {
 
         // higher toughness = more likely to be a tough town
         toughTown = (Math.random() < toughness);
+        dug = false;
     }
 
     public String getLatestNews() {
@@ -115,6 +117,26 @@ public class Town {
         }
     }
 
+    public void digGold() {
+        if (!dug){
+            if (hunter.hasItemInKit("shovel")) {
+                int randNum = (int) (Math.random() * 2) + 1;
+                if (randNum == 1) {
+                    int nextRandNum = (int) (Math.random() * 20) + 1;
+                    System.out.println("You dug up " + nextRandNum + " gold!");
+                    hunter.changeGold(nextRandNum);
+                } else {
+                    System.out.println("You dug but only found dirt.");
+                }
+                dug = true;
+            } else {
+                System.out.println("You can't dig for gold without a shovel");
+            }
+        } else {
+            System.out.println("You already dug for gold in this town");
+        }
+    }
+
     public String toString() {
         return "This nice little town is surrounded by " + Colors.CYAN + terrain.getTerrainName() + Colors.RESET + ".";
     }
@@ -149,17 +171,5 @@ public class Town {
     private boolean checkItemBreak() {
         double rand = Math.random();
         return (rand < 0.5);
-    }
-
-    private String huntForTreasure() {
-        if (!leaveTown()) {
-            return "you have already searched this town";
-        }
-        int treasure = (int) (Math.random() * 3) + 1;
-        for (int i != )
-        Hunter.checkTreasure()
-
-
-
     }
 }
