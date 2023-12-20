@@ -94,6 +94,10 @@ public class Town {
      */
     public void lookForTrouble() {
         double noTroubleChance;
+        if (TreasureHunter.secretMode) {
+            System.out.println("the brawler, seeing your sword, realizes he picked a losing fight and gives you his gold");
+            hunter.changeGold();
+        }
         if (toughTown) {
             noTroubleChance = 0.66;
         } else {
