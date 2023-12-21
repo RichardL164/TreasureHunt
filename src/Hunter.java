@@ -22,6 +22,9 @@ public class Hunter {
         kit = new String[7]; // only 5 possible items can be stored in kit
         gold = startingGold;
         treasure = new String[3];
+        treasure[1] = " ";
+        treasure[2] = " ";
+        treasure[0] = " ";
     }
 
     //Accessors
@@ -33,7 +36,7 @@ public class Hunter {
         int i = 0;
         for (String treasure : treasure) {
             if (!treasure.equals(treasureFound)) {
-                this.treasure[i] += treasureFound;
+                this.treasure[i] = treasureFound;
                 return true;
             }
             i++;

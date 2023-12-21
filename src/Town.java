@@ -177,29 +177,27 @@ public class Town {
     }
 
     public String huntForTreasure() {
-        if (!isSearched) {
+        if (isSearched) {
             return "you have already searched this town";
         }
+        isSearched = true;
         int treasure = (int) (Math.random() * 3) + 1;
-        String found = "";
         if (treasure == 1) {
-            found = "crown";
+            if (hunter.checkTreasure("crown")) {
+                return "You found an crown";
+            }
         }
         if (treasure == 2) {
-            found = "gem";
+            if (hunter.checkTreasure("gem")) {
+                return "You found an gem";
+            }
         }
         if (treasure == 3) {
-            found = "trophy";
+            if (hunter.checkTreasure("trophy")) {
+                return "You found an trophy";
+            }
+
         }
-        if (hunter.checkTreasure(found)) {
-            return "You found an crown!";
-        } else if (hunter.checkTreasure(found)) {
-            System.out.println("You found an gem!");
-            return "You found an gem!";
-        } else if (hunter.checkTreasure(found)) {
-            return "You found an trophy";
-        } else {
-            return "You found dust!";
-        }
+        return "You found dust";
     }
 }
