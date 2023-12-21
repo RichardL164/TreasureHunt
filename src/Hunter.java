@@ -32,21 +32,13 @@ public class Hunter {
     public boolean checkTreasure(String treasureFound) {
         int i = 0;
         for (String treasure : treasure) {
-            if (treasure != null && !treasure.equals(treasureFound)) {
+            if (treasure != treasureFound && treasureFound != "dust") {
                 this.treasure[i] += treasureFound;
+                i++;
                 return true;
             }
-            i++;
         }
         return false;
-    }
-
-    public String getTreasure() {
-        String allTreasures = "";
-        for (String treasure: treasure) {
-            allTreasures += treasure + " ";
-        }
-        return allTreasures;
     }
 
     /**

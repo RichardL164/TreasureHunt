@@ -108,7 +108,6 @@ public class Shop {
         }
     }
 
-
     /**
      * A pathway method that lets the Hunter sell an item.
      *
