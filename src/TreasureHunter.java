@@ -16,6 +16,8 @@ public class TreasureHunter {
     private Town currentTown;
     private Hunter hunter;
     private boolean hardMode;
+    public static boolean secretMode;
+
 
     /**
      * Constructs the Treasure Hunter game.
@@ -25,6 +27,7 @@ public class TreasureHunter {
         currentTown = null;
         hunter = null;
         hardMode = false;
+        secretMode = false;
     }
 
     /**
@@ -61,6 +64,8 @@ public class TreasureHunter {
             hunter.buyItem("horse", 12);
             hunter.buyItem("boat", 20);
             hunter.buyItem("boots", 25);
+        } else if (hard.equals("s")) {
+            secretMode = true;
         }
     }
 

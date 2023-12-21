@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Shop {
     // constants
+    private static final int SWORD_COST = 0;
     private static final int WATER_COST = 2;
     private static final int ROPE_COST = 4;
     private static final int MACHETE_COST = 6;
@@ -77,6 +78,27 @@ public class Shop {
         }
     }
 
+    public void digGold() {
+        if (!dug){
+            if (hunter.hasItemInKit("shovel")) {
+                int randNum = (int) (Math.random() * 2) + 1;
+                if (randNum == 1) {
+                    int nextRandNum = (int) (Math.random() * 20) + 1;
+                    System.out.println("You dug up " + nextRandNum + " gold!");
+                    hunter.changeGold(nextRandNum);
+                } else {
+                    System.out.println("You dug but only found dirt.");
+                }
+                dug = true;
+            } else {
+                System.out.println("You can't dig for gold without a shovel");
+            }
+        } else {
+            System.out.println("You already dug for gold in this town");
+        }
+    }
+
+
     /**
      * A method that returns a string showing the items available in the shop
      * (all shops sell the same items).
@@ -84,14 +106,28 @@ public class Shop {
      * @return the string representing the shop's items available for purchase and their prices.
      */
     public String inventory() {
-        String str = "Water: " + WATER_COST + " gold\n";
-        str += "Rope: " + ROPE_COST + " gold\n";
-        str += "Machete: " + MACHETE_COST + " gold\n";
-        str += "Shovel: " + SHOVEL_COST + " gold\n";
-        str += "Horse: " + HORSE_COST + " gold\n";
-        str += "Boat: " + BOAT_COST + " gold\n";
-        str += "Boots: " + BOOTS_COST + " gold\n";
-        return str;
+        String str;
+        if (TreasureHunter.secretMode) {
+            str = "Sword: " + SWORD_COST + " gold\n";
+            str += "Water: " + WATER_COST + " gold\n";
+            str += "Rope: " + ROPE_COST + " gold\n";
+            str += "Machete: " + MACHETE_COST + " gold\n";
+            str += "Shovel: " + SHOVEL_COST + " gold\n";
+            str += "Horse: " + HORSE_COST + " gold\n";
+            str += "Boat: " + BOAT_COST + " gold\n";
+            str += "Boots: " + BOOTS_COST + " gold\n";
+            return str;
+        } else {
+            str = "Water: " + WATER_COST + " gold\n";
+            str += "Rope: " + ROPE_COST + " gold\n";
+            str += "Machete: " + MACHETE_COST + " gold\n";
+            str += "Shovel: " + SHOVEL_COST + " gold\n";
+            str += "Horse: " + HORSE_COST + " gold\n";
+            str += "Boat: " + BOAT_COST + " gold\n";
+            str += "Boots: " + BOOTS_COST + " gold\n";
+            return str;
+
+        }
     }
 
     /**
