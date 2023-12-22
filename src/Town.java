@@ -101,11 +101,16 @@ public class Town {
         if (hunter.hasItemInKit("sword")) {
             System.out.println("the brawler, seeing your sword, realizes he picked a losing fight and gives you his gold");
             hunter.changeGold((int) (Math.random() * 10) + 1);
-        } else {
+        }
+        else {
             if (toughTown) {
                 noTroubleChance = 0.66;
             } else {
                 noTroubleChance = 0.33;
+            }
+
+            if (TreasureHunter.easyMode) {
+                noTroubleChance = 0.5;
             }
 
             if (Math.random() > noTroubleChance) {
@@ -178,6 +183,9 @@ public class Town {
      */
     private boolean checkItemBreak() {
         double rand = Math.random();
+        if (TreasureHunter.easyMode) {
+            return false;
+        }
         return (rand < 0.5);
     }
 
