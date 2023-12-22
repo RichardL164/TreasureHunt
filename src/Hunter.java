@@ -33,16 +33,30 @@ public class Hunter {
     }
 
     public boolean checkTreasure(String treasureFound) {
-        int i = 0;
-        for (String treasure : treasure) {
-            if (!treasure.equals(treasureFound)) {
-                this.treasure[i] = treasureFound;
-                return true;
+        for (int i = 0; i <= treasure.length - 1; i++) {
+            if (!treasureFound.equals(this.treasure[i])) {
+                if (treasure[i].equals(" ")) {
+                    this.treasure[i] = treasureFound;
+                    return true;
+                }
             }
-            i++;
         }
         return false;
     }
+    public boolean win() {
+        if (!treasure[2].equals(" ")) {
+            return true;
+        }
+        return false;
+    }
+    public boolean nothingFound() {
+        if (treasure[0].equals(" ")) {
+            return true;
+        }
+        return false;
+    }
+
+
 
     public String getTreasure() {
         String allTreasures = "";

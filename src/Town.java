@@ -197,19 +197,21 @@ public class Town {
         int treasure = (int) (Math.random() * 3) + 1;
         if (treasure == 1) {
             if (hunter.checkTreasure("crown")) {
-                return "You found an crown";
+                return "You found an crown!";
             }
+            return "You already found this.";
         }
         if (treasure == 2) {
             if (hunter.checkTreasure("gem")) {
-                return "You found an gem";
+                return "You found an gem!";
             }
+            return "You already found this.";
         }
         if (treasure == 3) {
             if (hunter.checkTreasure("trophy")) {
-                return "You found an trophy";
+                return "You found an trophy!";
             }
-
+            return "You already found this.";
         }
         return "You found dust";
     }

@@ -67,21 +67,7 @@
       <option name="project" value="LOCAL" />
       <updated>1703181864382</updated>
     </task>
-    <task id="LOCAL-00004" summary="Fixed TH 6 bug">
-      <created>1703267552961</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703267552961</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Done with TH 10">
-      <created>1703269227654</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703269227654</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,9 +85,6 @@
     <MESSAGE value="Done with TH 3" />
     <MESSAGE value="Done with TH 7 &#10;Done with TH 9" />
     <MESSAGE value="Fixed push bug, TH 1, 2, 3, 4, 6, 7, 9 are done" />
-    <MESSAGE value="Fixed TH 6 bug" />
-    <MESSAGE value="Fixed TH 10" />
-    <MESSAGE value="Done with TH 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with TH 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed push bug, TH 1, 2, 3, 4, 6, 7, 9 are done" />
   </component>
 </project>
