@@ -78,25 +78,6 @@ public class Shop {
         }
     }
 
-    public void digGold() {
-        if (!dug){
-            if (hunter.hasItemInKit("shovel")) {
-                int randNum = (int) (Math.random() * 2) + 1;
-                if (randNum == 1) {
-                    int nextRandNum = (int) (Math.random() * 20) + 1;
-                    System.out.println("You dug up " + nextRandNum + " gold!");
-                    hunter.changeGold(nextRandNum);
-                } else {
-                    System.out.println("You dug but only found dirt.");
-                }
-                dug = true;
-            } else {
-                System.out.println("You can't dig for gold without a shovel");
-            }
-        } else {
-            System.out.println("You already dug for gold in this town");
-        }
-    }
 
 
     /**
