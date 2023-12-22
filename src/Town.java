@@ -98,29 +98,30 @@ public class Town {
      */
     public void lookForTrouble() {
         double noTroubleChance;
-//        if (TreasureHunter.secretMode) {
-//            System.out.println("the brawler, seeing your sword, realizes he picked a losing fight and gives you his gold");
-//            hunter.changeGold();
-//        }
-        if (toughTown) {
-            noTroubleChance = 0.66;
+        if (hunter.hasItemInKit("sword")) {
+            System.out.println("the brawler, seeing your sword, realizes he picked a losing fight and gives you his gold");
+            hunter.changeGold((int) (Math.random() * 10) + 1);
         } else {
-            noTroubleChance = 0.33;
-        }
-
-        if (Math.random() > noTroubleChance) {
-            printMessage = "You couldn't find any trouble";
-        } else {
-            printMessage = Colors.RED + "You want trouble, stranger!  You got it!\nOof! Umph! Ow!\n" + Colors.RESET;
-            int goldDiff = (int) (Math.random() * 10) + 1;
-            if (Math.random() > noTroubleChance) {
-                printMessage += Colors.RED + "Okay, stranger! You proved yer mettle. Here, take my gold." + Colors.RESET;
-                printMessage += Colors.RED + "\nYou won the brawl and receive " + Colors.RESET + Colors.YELLOW + goldDiff + " gold." + Colors.RESET;
-                hunter.changeGold(goldDiff);
+            if (toughTown) {
+                noTroubleChance = 0.66;
             } else {
-                printMessage += Colors.RED + "That'll teach you to go lookin' fer trouble in MY town! Now pay up!" + Colors.RESET;
-                printMessage += Colors.RED + "\nYou lost the brawl and pay " + Colors.YELLOW + goldDiff + " gold." + Colors.RESET;
-                hunter.changeGold(-goldDiff);
+                noTroubleChance = 0.33;
+            }
+
+            if (Math.random() > noTroubleChance) {
+                printMessage = "You couldn't find any trouble";
+            } else {
+                printMessage = Colors.RED + "You want trouble, stranger!  You got it!\nOof! Umph! Ow!\n" + Colors.RESET;
+                int goldDiff = (int) (Math.random() * 10) + 1;
+                if (Math.random() > noTroubleChance) {
+                    printMessage += Colors.RED + "Okay, stranger! You proved yer mettle. Here, take my gold." + Colors.RESET;
+                    printMessage += Colors.RED + "\nYou won the brawl and receive " + Colors.RESET + Colors.YELLOW + goldDiff + " gold." + Colors.RESET;
+                    hunter.changeGold(goldDiff);
+                } else {
+                    printMessage += Colors.RED + "That'll teach you to go lookin' fer trouble in MY town! Now pay up!" + Colors.RESET;
+                    printMessage += Colors.RED + "\nYou lost the brawl and pay " + Colors.YELLOW + goldDiff + " gold." + Colors.RESET;
+                    hunter.changeGold(-goldDiff);
+                }
             }
         }
     }

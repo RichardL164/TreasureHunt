@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="Fixed push bug, TH 1, 2, 3, 4, 6, 7, 9 are done">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_19_2023_1_19_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_19_2023_1_19_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2023_1_09_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2023_1_09_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="fe04c8e2-fa27-4932-8840-f3588ac670dc" name="Changes" comment="Fixed TH 6 bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hunter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Town.java" afterDir="false" />
     </list>
@@ -68,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703181864382</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed TH 6 bug">
+      <created>1703267552961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703267552961</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +93,7 @@
     <MESSAGE value="Done with TH 3" />
     <MESSAGE value="Done with TH 7 &#10;Done with TH 9" />
     <MESSAGE value="Fixed push bug, TH 1, 2, 3, 4, 6, 7, 9 are done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed push bug, TH 1, 2, 3, 4, 6, 7, 9 are done" />
+    <MESSAGE value="Fixed TH 6 bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed TH 6 bug" />
   </component>
 </project>

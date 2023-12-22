@@ -44,20 +44,34 @@ public class Shop {
         customer = hunter;
 
         if (buyOrSell.equals("b")) {
-            System.out.println("Welcome to the shop! We have the finest wares in town.");
-            System.out.println("Currently we have the following items:");
-            System.out.println(inventory());
-            System.out.print("What're you lookin' to buy? ");
-            String item = SCANNER.nextLine().toLowerCase();
-            int cost = checkMarketPrice(item, true);
-            if (cost == 0) {
-                System.out.println("We ain't got none of those.");
-            } else {
-                System.out.print("It'll cost you " + Colors.YELLOW + cost + " gold" + Colors.RESET + ". Buy it (y/n)? ");
+            if (hunter.hasItemInKit("sword")) {
+                System.out.println("Welcome to the shop! We have the finest wares in town.");
+                System.out.println("Currently we have the following items:");
+                System.out.println(inventory());
+                System.out.print("The sword intimidates the shopkeeper and he gives you the item freely. ");
+                String item = SCANNER.nextLine().toLowerCase();
+                System.out.print("It'll cost you " + Colors.YELLOW + " 0 gold" + Colors.RESET + ". Buy it (y/n)? ");
                 String option = SCANNER.nextLine().toLowerCase();
-
                 if (option.equals("y")) {
                     buyItem(item);
+                    hunter.changeGold(getCostOfItem(item));
+                }
+            } else {
+                System.out.println("Welcome to the shop! We have the finest wares in town.");
+                System.out.println("Currently we have the following items:");
+                System.out.println(inventory());
+                System.out.print("What're you lookin' to buy? ");
+                String item = SCANNER.nextLine().toLowerCase();
+                int cost = checkMarketPrice(item, true);
+                if (cost < 0) {
+                    System.out.println("We ain't got none of those.");
+                } else {
+                    System.out.print("It'll cost you " + Colors.YELLOW + cost + " gold" + Colors.RESET + ". Buy it (y/n)? ");
+                    String option = SCANNER.nextLine().toLowerCase();
+
+                    if (option.equals("y")) {
+                        buyItem(item);
+                    }
                 }
             }
         } else {
@@ -161,7 +175,9 @@ public class Shop {
      * @return The cost of the item or 0 if the item is not found.
      */
     public int getCostOfItem(String item) {
-        if (item.equals("water")) {
+        if (item.equals("sword")) {
+            return SWORD_COST;
+        } else if (item.equals("water")) {
             return WATER_COST;
         } else if (item.equals("rope")) {
             return ROPE_COST;
@@ -176,7 +192,7 @@ public class Shop {
         } else if (item.equals("boots")) {
             return BOOTS_COST;
         } else {
-            return 0;
+            return -1;
         }
     }
 
