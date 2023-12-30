@@ -120,7 +120,10 @@ public class TreasureHunter {
             if (hunter.getGold() <= 0) {
                 System.out.println("Game over");
                 choice = "x";
-            } else {
+            } else if (hunter.win()) {
+                System.out.println("Congratulations, you have found the last of the three treasures, you win!");
+                choice = "x";
+            }else {
                 System.out.println();
                 System.out.println(currentTown.getLatestNews());
                 System.out.println("***");

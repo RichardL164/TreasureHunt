@@ -9,6 +9,7 @@ public class Hunter {
     private String hunterName;
     private String[] kit;
     private String[] treasure;
+    private int treasureFound;
     private int gold;
 
     /**
@@ -22,9 +23,10 @@ public class Hunter {
         kit = new String[7]; // only 5 possible items can be stored in kit
         gold = startingGold;
         treasure = new String[3];
+        treasureFound = 0;
+        treasure[0] = " ";
         treasure[1] = " ";
         treasure[2] = " ";
-        treasure[0] = " ";
     }
 
     //Accessors
@@ -33,16 +35,24 @@ public class Hunter {
     }
 
     public boolean checkTreasure(String treasureFound) {
-        for (int i = 0; i <= treasure.length - 1; i++) {
-            if (!treasureFound.equals(this.treasure[i])) {
-                if (treasure[i].equals(" ")) {
-                    this.treasure[i] = treasureFound;
-                    return true;
-                }
+        if (treasurePresent(treasureFound)) {
+            return false;
+        } else {
+            treasure[this.treasureFound] = treasureFound;
+            this.treasureFound++;
+            return true;
+        }
+    }
+
+    public boolean treasurePresent(String present) {
+        for (String treasure : treasure) {
+            if (present.equals(treasure)) {
+                return true;
             }
         }
         return false;
     }
+
     public boolean win() {
         if (!treasure[2].equals(" ")) {
             return true;
